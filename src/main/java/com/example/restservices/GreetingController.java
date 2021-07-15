@@ -23,7 +23,7 @@ public class GreetingController {
 	
 	@GetMapping("/")
 	public ResponseEntity<Data> getData() {
-		return new ResponseEntity<>(serviceLayer.consumeAPI(), HttpStatus.OK);
+		return serviceLayer.consumeAPI();
 		
 	}
 }
